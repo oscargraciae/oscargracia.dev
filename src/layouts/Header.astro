@@ -1,0 +1,62 @@
+<header class="flex justify-center bg-transparent fixed z-10 w-full">
+  <div class="flex flex-row items-center justify-between container py-4">
+    <div>
+      <h1 class="text-lg font-bold">Oscar Gracia</h1>
+    </div>
+    <nav class="text-md space-x-3">
+      <a class="group relative text-gray-800 font-medium" href="#about">
+        About me
+        <span class="h-[2px] bg-primary-600 absolute -bottom-1 left-0 group-hover:w-full transition-all w-0"></span>
+      </a>
+      <a class="group relative text-gray-800 font-medium" href="#projects">
+        Projects
+        <span class="h-[2px] bg-primary-600 absolute -bottom-1 left-0 group-hover:w-full transition-all w-0"></span>
+      </a>
+      <a class="group relative text-gray-800 font-medium" href="#experience">
+        Experience
+        <span class="h-[2px] bg-primary-600 absolute -bottom-1 left-0 group-hover:w-full transition-all w-0"></span>
+      </a>
+      <!-- <a class="group relative text-gray-800 font-medium" href="#">
+        Contact
+        <span class="h-[2px] bg-primary-600 absolute -bottom-1 left-0 group-hover:w-full transition-all w-0"></span>
+      </a> -->
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Este código se ejecutará en el cliente
+  const header = document.querySelector('header');
+
+  function checkScroll() {
+    if (window.scrollY === 0) {
+      header.classList.remove('glass');
+    } else {
+      header.classList.add('glass');
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("header a");
+
+    links.forEach((link) => {
+      link.addEventListener("click", smoothScroll);
+    });
+
+    function smoothScroll(e) {
+      e.preventDefault();
+
+      const targetId = e.currentTarget.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  });
+</script>

@@ -1,0 +1,64 @@
+---
+import Section from '../layouts/Section.astro';
+import ProjectCard from './ProjectCard.astro';
+---
+<Section id='projects'>
+  <h2 class="mb-1 text-4xl font-black text-primary-500">
+    Projects
+  </h2>
+  
+  <div class='grid grid-cols-3 gap-x-6 place-self-stretch place-content-between'>
+    <ProjectCard
+      title="EVAA Survey"
+      description="EVAA is a digital platform focused on the creation, distribution, and analysis of surveys. "
+      image="/projects/EVAA-Dashboard.png"
+      link="https://oscargracia.dev"
+      tech={['React', 'Node', 'PostgreSQL', 'Express', 'TypeScript', 'Tailwind']}
+      linkProject="https://evaa.mx"
+      linkGithub=""
+    />
+
+    <ProjectCard
+      title="Streamestrenos"
+      description="Application that streamlines the discovery of new releases on streaming platforms."
+      image="/projects/streamestrenos.png"
+      link="https://oscargracia.dev"
+      tech={['Astro','Node', 'Express', 'Tailwind', 'JavaScript']}
+      linkProject="https://streamestrenos.com"
+      linkGithub="https://github.com/oscargraciae/streamestrenos"
+    />
+
+    <ProjectCard
+      title="Eathouse"
+      description="Meal delivery application tailored for corporate services, providing a proprietary virtual dining solution for businesses."
+      image="/projects/eathouse.png"
+      link="https://oscargracia.dev"
+      tech={['React', 'Node', 'PostgreSQL', 'Express']}
+      linkProject=""
+      linkGithub=""
+    />
+  </div>
+</Section>
+
+<!-- <div class='grid grid-cols-3 gap-x-4 place-self-stretch place-content-between'>
+  <ProjectCard
+    title="EVAA Survey"
+    description="EVAA is a digital platform focused on the creation, distribution, and analysis of surveys. "
+    image="/projects/EVAA-Dashboard.png"
+    link="https://oscargracia.dev"
+  />
+
+  <ProjectCard
+    title="streamestrenos"
+    description="EVAA is a digital platform focused on the creation, distribution, and analysis of surveys. "
+    image="/projects/streamestrenos.png"
+    link="https://oscargracia.dev"
+  />
+
+  <ProjectCard
+    title="Eathouse"
+    description="EVAA is a digital platform focused on the creation, distribution, and analysis of surveys. "
+    image="/projects/eathouse.png"
+    link="https://oscargracia.dev"
+  />
+</div> -->

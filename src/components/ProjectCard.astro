@@ -1,0 +1,34 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	image: string;
+  linkProject: string;
+  linkGithub: string;
+  tech: string[];
+  // 'node', 'react', 'html', 'css', 'astro', 'typescript', 'javascript'
+}
+
+const { title, description, image, link, tech, linkProject, linkGithub } = Astro.props
+---
+
+<div class="w-full bg-transparent group h-[470px]">
+  <figure>
+    <img src={image} alt="Shoes"c class='object-cover w-full aspect-video ' />
+  </figure>
+  <div class="card-body px-0 space-y-2">
+    <h2 class="card-title">{title}</h2>
+    <p class='text-gray-500 text-sm'>
+      {description}
+    </p>
+    <div class='flex flex-row flex-wrap gap-2 h-12 content-start'>
+      {tech.map((tech) => (
+        <span class='text-xs text-gray-500 bg-gray-100 rounded px-2 py-1'>{tech}</span>
+      ))}
+    </div>
+    <div class='flex-row space-x-2 justify-end flex'>
+      { linkProject && <a href={linkProject} target='_blank' class="btn btn-link btn-primary-500 btn-sm hover:text-green-700">View Project</a> }
+      { linkGithub && <a href={linkGithub} target='_blank' class="btn btn-link btn-primary-500 btn-sm hover:text-green-700">View GitHub</a> }
+    </div>
+  </div>
+</div>

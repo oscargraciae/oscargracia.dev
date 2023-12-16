@@ -1,0 +1,78 @@
+---
+import Linkedin from './icon/Linkedin.astro'
+import Github from './icon/Github.astro'
+import Mail from './icon/Mail.astro'
+---
+<div id='about' class='bg-gradient-to-r from-white to-primary-50'>
+  <section class="flex items-center justify-center py-24 glass">
+    <article class='flex flex-row gap-x-24 items-center w-2/3'>
+      <div class='space-y-3'>
+        <h1 class="text-5xl font-medium">Hey! I'm <span class='text-primary-500'>Oscar Gracia</span> a Full Stack Developer</h1>
+        <p class="text-gray-600 text-lg">
+          I am a software developer with 10 years of industry experience, skilled in using a wide range of languages, tools, frameworks, and technologies. I am committed to continuous learning and improving my skills to deliver the highest quality results.
+        </p>
+
+        <div id='social' class='flex flex-row justify-start items-center text-lg gap-x-3'>
+          <a href="https://linkedin.com/in/ogracia " target="_blank" class='text-gray-600 hover:text-[#0077B5] hover:border-[#0077B5] transition-transform btn btn-circle btn-outline btn-sm hover:bg-transparent'>
+            <Linkedin />
+          </a>
+          <a href="https://github.com/oscargraciae" target="_blank" class="text-gray-600 hover:text-black hover:border-black  transition-transform btn btn-circle btn-outline btn-sm hover:bg-transparent">
+            <Github />
+          </a>
+          <a href="mailto:oscar.graciae@gmail.com" class="text-gray-600 hover:text-yellow-500 hover:border-yellow-500 transition-transform btn btn-circle btn-outline btn-sm hover:bg-transparent">
+            <Mail />
+          </a>
+        </div>
+      </div>
+
+      <div class="avatar relative">
+        <div class='w-44 h-44 bg-primary-100 absolute rounded-full pulse-avatar' />
+        <div class="w-44 rounded-full shadow-md ring ring-primary-500 ring-offset-base-100 ring-offset-1 z-30">
+          <img src="https://pbs.twimg.com/profile_images/1496256480600801290/KSb0Ezkh_400x400.jpg" />
+        </div>
+      </div>
+
+    </article>
+  </section>
+
+</div>
+
+<div class='flex flex-col items-center justify-center w-full mt-8'>
+  <div class='flex flex-row items-center justify-center gap-x-3'>
+    <h2 class='text-2xl font-medium'>I'm currently working with</h2>
+  </div>
+  <div class='flex flex-row items-center justify-center gap-x-6 py-6'>
+    <img src="/logos/nodejs.svg" height={32} />
+    <img src="/logos/react.svg" height={32} />
+    <img src="/logos/logo-javascript.svg" height={32} />
+    <img src="/logos/typescript.svg" height={32} />
+    <img src="/logos/tailwind.svg" height={32} />
+    <img src="/logos/nextjs.svg" height={32} />
+    <img src="/logos/astro.svg" height={32} />
+    <img src="/logos/vercel.svg" height={32} />
+    <img src="/logos/flutter.svg" height={32} />
+    <!-- <img src="/logos/rails.svg" height={32} /> -->
+    <img src="/logos/postgresql.svg" height={32} />
+    <img src="/logos/transack.svg" height={32} />
+  </div>
+</div>
+<!-- bg-[#d1d1f7] -->
+
+<style>
+  .pulse-avatar {
+    animation: pings 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes pings {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+</style>
