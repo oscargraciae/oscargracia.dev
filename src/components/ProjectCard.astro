@@ -9,12 +9,12 @@ interface Props {
   // 'node', 'react', 'html', 'css', 'astro', 'typescript', 'javascript'
 }
 
-const { title, description, image, link, tech, linkProject, linkGithub } = Astro.props
+const { title, description, image, tech, linkProject, linkGithub } = Astro.props
 ---
 
 <div class="w-full bg-transparent group h-[470px]">
   <figure>
-    <img src={image} alt="Shoes"c class='object-cover w-full aspect-video ' />
+    <img src={image} alt="Shoes" class='object-cover w-full aspect-video ' />
   </figure>
   <div class="card-body px-0 space-y-2">
     <h2 class="card-title">{title}</h2>
