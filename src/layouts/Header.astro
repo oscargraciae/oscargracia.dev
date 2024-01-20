@@ -30,9 +30,9 @@
 
   function checkScroll() {
     if (window.scrollY === 0) {
-      header.classList.remove('glass');
+      header?.classList.remove('glass');
     } else {
-      header.classList.add('glass');
+      header?.classList.add('glass');
     }
   }
 
@@ -47,14 +47,14 @@
       link.addEventListener("click", smoothScroll);
     });
 
-    function smoothScroll(e) {
+    function smoothScroll(e: any) {
       e.preventDefault();
 
       const targetId = e.currentTarget.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
       window.scrollTo({
-        top: targetElement.offsetTop,
+        top: targetElement?.offsetTop,
         behavior: "smooth",
       });
     }
